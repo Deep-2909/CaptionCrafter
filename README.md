@@ -1,8 +1,8 @@
 ## 🖼️ CaptionCrafter 🖼️
 
 **AI-Powered Image Caption Generator for Instagram**  
-Generate stunning, stylish, and **visually-grounded** captions for your images using BLIP + LLMs.  
-No hallucinations. Just real, aesthetic descriptions tailored to your vibe.
+- Generate stunning, stylish, and **visually-grounded** captions for your images using BLIP + LLMs.  
+- No hallucinations. Just real, aesthetic descriptions tailored to your vibe.
 
 ---
 
@@ -18,13 +18,14 @@ No hallucinations. Just real, aesthetic descriptions tailored to your vibe.
 ---
 
 ## 🗂️ Directory Structure
+```bash
 CaptionCrafter/
 ├── captioncrafter_app.py # Streamlit UI logic
 ├── caption_utils.py # BLIP + Together API logic
 ├── requirements.txt # Python dependencies
 ├── .env # Hidden file for API key
 └── README.md # You're reading it!
-
+```
 
 ---
 
@@ -42,40 +43,62 @@ pip install -r requirements.txt
 ```
 
 3. Add your Together API key
-Create a .env file in the root directory:
-**TOGETHER_API_KEY**=your_actual_api_key_here
+- Create a .env file in the root directory:
+```bash
+TOGETHER_API_KEY=your_actual_api_key_here
+```
 
-4. Launch the app
+5. Launch the app
 ```bash
 streamlit run captioncrafter_app.py
 ```
 
-**✨ How It Works**
+## ✨ How It Works
 
-**Image Input**: Upload 1 or more images via the Streamlit UI.
-**BLIP Model**: Generates raw visual description per image.
-**LLM Rephrasing (Mixtral via Together.ai)**: Refines the description into stylish, factual prose.
-**Caption Generation**: Multiple caption styles are generated based on the selected tone.
-**Copy Buttons**: Instantly copy any caption with one click.
+- **Image Input:** Upload 1 or more images via the Streamlit UI.  
+- **BLIP Model:** Generates raw visual description per image.  
+- **LLM Rephrasing (Mixtral via Together.ai):** Refines the description into stylish, factual prose.  
+- **Caption Generation:** Multiple caption styles are generated based on the selected tone.  
+- **Copy Buttons:** Instantly copy any caption with one click.  
+
+---
+
+## 📸 Sample Output
+
+### 🔹 Input Image
+![Sample Image](horseman.jpg)
+
+### 🔹 Generated Captions
+![Generated Captions](horsemanCaptions.png)
+
 
 ## 🎨 Tones Supported
 
-**Tone**	                                            **Description**
-Aesthetic	                        Clean, minimal, Instagram-friendly vibes
-Poetic	                            Deep, metaphorical yet grounded in visuals
-Funny	                            Witty and quirky — but based on what’s visible
-Motivational	                    Uplifting quotes inspired by the subject’s stance/pose
-Minimalist	                        Sleek, one-line captions with elegance
-Sarcastic	                        Edgy, Gen-Z tone with visual relevance
-Romantic	                        Only when romance is visibly implied
-Travel, Foodie	                    Auto-skip fiction if not visibly relevant
-Hashtag-Heavy	                    Each caption has 5 trending hashtags
-Song-Lyrics	                        Lyric-style captions that match the scene’s aesthetic
+| **Tone**         | **Description**                                            |
+|------------------|------------------------------------------------------------|
+| Aesthetic         | Clean, minimal, Instagram-friendly vibes                  |
+| Poetic            | Deep, metaphorical yet grounded in visuals                |
+| Funny             | Witty and quirky — but based on what’s visible            |
+| Motivational      | Uplifting quotes inspired by the subject’s stance/pose    |
+| Minimalist        | Sleek, one-line captions with elegance                    |
+| Sarcastic         | Edgy, Gen-Z tone with visual relevance                    |
+| Romantic          | Only when romance is visibly implied                      |
+| Travel, Foodie    | Auto-skips fiction if not visibly relevant                |
+| Hashtag-Heavy     | Each caption has 5 trending hashtags                      |
+| Song-Lyrics       | Lyric-style captions that match the scene’s aesthetic     |
+
+---
 
 ## 🧰 Built With
 
-Streamlit
-HuggingFace Transformers
-Together.ai API
-Salesforce BLIP
-Python, PIL, Requests
+- **Streamlit**  
+- **HuggingFace Transformers**  
+- **Together.ai API**  
+- **Salesforce BLIP**  
+- **Python, PIL, Requests**
+
+## Contributing 🤝
+Contributions are welcome! Please feel free to raise issues and submit a Pull Request.
+
+## ⚡ Powered By
+• [Together.ai](https://www.together.ai/) • [Streamlit](https://streamlit.io/)
